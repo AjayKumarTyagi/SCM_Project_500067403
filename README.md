@@ -8,4 +8,6 @@
 
 # Collaboration
 * No one can push directly to master branch except manager.
-* All merging will take place in manager branch.
+* All contributors will work on separate branch.
+* All contributors will create a pull request to merge their code.
+* All merging will take place in separate branch.
