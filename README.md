@@ -6,6 +6,6 @@
 * This project is based on C language.
 * File handling is used to store the data.
 
-#Collaboration
+# Collaboration
 * No one can push directly to master branch except manager.
 * All merging will take place in manager branch.
