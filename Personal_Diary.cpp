@@ -139,3 +139,32 @@ int main()
     return 0;
     
 }
+
+void editpassword(){
+	system("cls");
+	printf("\n");
+	
+	char pass[15]={0};
+	char confirm[15]={0},ch;
+	
+	
+	FILE *fp;
+	fp=fopen("SE","wb");
+	
+	if(fp==NULL){
+		
+		
+		fp=fopen("SE","wb");
+		
+		if(fp==NULL)
+		{
+			printf("SYSTEM ERROR.....");
+			
+			getch();
+			
+			return ;
+		}
+		
+		fclose(fp);
+	}
+}
