@@ -145,7 +145,8 @@ void editpassword(){
 	printf("\n");
 	
 	char pass[15]={0};
-	char confirm[15]={0},ch;
+	char confirm[15]={0};
+	char ch;
 	
 	
 	FILE *fp;
@@ -266,6 +267,69 @@ void editpassword(){
                 }
                 
             }
-		 }
-	 }
+            
+            
+            confirm[i]='\0';
+            
+            if(strcmp(pass,confirm)==0)
+                
+            {
+                
+                fp=fopen("SE","wb");
+                
+                if(fp==NULL)
+                    
+                {
+                    
+                    printf("\n\t\tSYSTEM ERROR");
+                    
+                    getch();
+                    
+                    return ;
+                    
+                }
+                
+                i=0;
+                
+                while(pass[i]!='\0')
+                    
+                {
+                    
+                    ch=pass[i];
+                    
+                    putc(ch+5,fp);
+                    
+                    i++;
+                    
+                }
+                
+                    putc(EOF,fp);
+                
+                fclose(fp);
+                
+            }
+            
+            else
+                
+            {
+                
+                printf("\n\tTHE NEW PASSWORD DOES NOT MATCH.");
+                
+                choice=1;
+                
+                
+            }
+            
+            
+        }
+        
+    }while(choice==1);
+    
+    
+      
+    printf("\n\n\tPASSWORD CHANGED...\n\n\tPRESS ANY KEY TO GO BACK...");
+    
+    getch();
+    
 }
+		
