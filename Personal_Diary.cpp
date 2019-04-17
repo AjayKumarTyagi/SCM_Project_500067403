@@ -166,5 +166,106 @@ void editpassword(){
 		}
 		
 		fclose(fp);
+		
+		 printf("\nSYSTEM RESTORED...\nYOUR PASSWORD IS 'ENTER'\n PRESS ENTER TO CHANGE PASSWORD\n\n");
+	
+	     getch();
 	}
+	
+	 fclose(fp);
+	 
+	 check=password();
+	 
+	 if(check==1){
+	 	
+	 	return ;
+	 }
+	 
+	 do{
+	 	
+	 	if(check==0)
+	 	
+	 	{
+	 		i=0;
+	 		
+	 		choice=0;
+	 		
+	 		printf("\n\n\tENTER THE NEW PASSWORD:");
+	 		
+	 		fflush(stdin);
+	 		
+	 		pass[0]=getch();
+	 		
+			 while(pass[i]!='\r'){
+			 	
+			 	
+			 	if(pass[i]=='\b'){
+			 		
+			 		i--;
+			 		
+			 		printf("\b");
+			 		
+			 		printf(" ");
+			 		
+			 		printf("\b");
+			 		
+			 		pass[i]=getch();
+			 		
+				 }
+				 
+				 else
+				 {
+				 	
+				 	printf("*");
+				 	
+				 	i++;
+				 	
+				 	pass[i]=getch();
+				 }
+			 }
+			 
+			 pass[i]='\0';
+            
+            i=0;
+            
+            printf("\n\tCONFIRM PASSWORD:");
+            
+            confirm[0]=getch();
+            
+             while(confirm[i]!='\r')
+                
+            {
+                
+                if(confirm[i]=='\b')
+                    
+                {
+                    
+                    i--;
+                    
+                    printf("\b");
+                    
+                    printf(" ");
+                    
+                    printf("\b");
+                    
+                    confirm[i]=getch();
+                    
+                }
+                
+                 
+                else
+                    
+                {
+                    
+                    printf("*");
+                    
+                    i++;
+                    
+                    confirm[i]=getch();
+                    
+                }
+                
+            }
+		 }
+	 }
 }
