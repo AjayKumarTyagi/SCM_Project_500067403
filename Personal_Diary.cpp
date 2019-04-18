@@ -616,6 +616,30 @@ void deleterecords()
                     printf("\nDELETED SUCCESFULLY...");
                     
                     break;
+                    
+                      default:
+                    
+                    printf("\n\tYOU ENTERED WRONG CHOICE");
+                    
+                    break;
+                    
+            }
+            
+        }while(choice<1||choice>2);
+        
+        
+        
+        printf("\n\tDO YOU LIKE TO DELETE ANOTHER RECORD.(Y/N):");
+        
+        fflush(stdin);
+        
+        scanf("%c",&another);
+        
+    }
+    
+    printf("\n\n\tPRESS ANY KEY TO EXIT...");
+    
+    getch();
 
 
 }		
