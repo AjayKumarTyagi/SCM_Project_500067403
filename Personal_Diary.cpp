@@ -503,7 +503,51 @@ void deleterecords()
         
         printf("\n\t#DELETE A PARTICULAR RECORD BY TIME\t[2]");
         
-        
-	
+        do
+            
+        {
+            
+            printf("\n\t\tENTER YOU CHOICE:");
+            
+            scanf("%d",&choice);
+            
+            
+       switch(choice)
+           
+      {
+                   
+	    case 1:
+                    
+                    printf("\n\tENTER THE DATE OF RECORD TO BE DELETED:[yyyy-mm-dd]:");
+                    
+                    fflush(stdin);
+                    
+                    gets(filename);
+                    
+                    fp = fopen (filename, "wb" ) ;
+                    
+                    if ( fp == NULL )
+                        
+                    {
+                        
+                        printf("\nTHE FILE DOES NOT EXISTS");
+                        
+                        printf("\nPRESS ANY KEY TO GO BACK.");
+                       
+                          getch();
+                        
+                        return ;
+                        
+                    }
+                    
+                    fclose(fp);
+                    
+                    remove(filename);
+                    
+                    printf("\nDELETED SUCCESFULLY...");
+                    
+                    break;
+
+
 }		
 
