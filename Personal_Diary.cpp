@@ -461,5 +461,49 @@ void editpassword(){
     getch();
     
 }
-		
+
+
+void deleterecords()
+{
+	
+	system("cls");
+	
+	FILE *fp,*fptr;
+	
+	struct record file ;
+    
+    char filename[15],another = 'Y' ,time[10];;
+    
+    int choice,check;
+    
+    printf("\n\n\t\t*************************\n");
+    
+    printf("\t\t* WELCOME TO DELETE MENU*");
+    
+    printf("\n\t\t*************************\n\n");
+    
+    check = password();
+    
+    if(check==1)
+        
+    {
+        
+        return ;
+        
+    }
+    
+    
+    while ( another == 'Y' )
+        
+    {
+        
+        printf("\n\tHOW WOULD YOU LIKE TO DELETE.");
+        
+        printf("\n\t#DELETE WHOLE RECORD\t\t\t[1]");
+        
+        printf("\n\t#DELETE A PARTICULAR RECORD BY TIME\t[2]");
+        
+        
+	
+}		
 
