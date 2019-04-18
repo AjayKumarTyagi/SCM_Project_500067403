@@ -547,6 +547,75 @@ void deleterecords()
                     printf("\nDELETED SUCCESFULLY...");
                     
                     break;
+                    
+                       case 2:
+                    
+                    printf("\n\tENTER THE DATE OF RECORD:[yyyy-mm-dd]:");
+                    
+                    fflush(stdin);
+                    
+                    gets(filename);
+                    
+                    fp = fopen (filename, "rb" ) ;
+                    
+                    if ( fp == NULL )
+                        
+                    {
+                        
+                        printf("\nTHE FILE DOES NOT EXISTS");
+                        
+                        printf("\nPRESS ANY KEY TO GO BACK.");
+                        
+                        getch();
+                        
+                        return ;
+                        
+                    }
+                    
+                    fptr=fopen("temp","wb");
+                    
+                    if(fptr==NULL)
+                        
+                    {
+                        
+                        printf("\nSYSTEM ERROR");
+                        
+                        printf("\nPRESS ANY KEY TO GO BACK");
+                        
+                        getch();
+                        
+                        return ;
+                        
+                    }
+                    
+                    printf("\n\tENTER THE TIME OF RECORD TO BE DELETED:[hh:mm]:");
+                    
+                    fflush(stdin);
+                    
+                    gets(time);
+                    
+                    while(fread(&file,sizeof(file),1,fp)==1)
+                        
+                    {
+                        
+                        if(strcmp(file.time,time)!=0)
+                            
+                            fwrite(&file,sizeof(file),1,fptr);
+                        
+                    }
+                    
+                    
+                    fclose(fp);
+                    
+                    fclose(fptr);
+                    
+                    remove(filename);
+                    
+                    rename("temp",filename);
+                    
+                    printf("\nDELETED SUCCESFULLY...");
+                    
+                    break;
 
 
 }		
