@@ -708,6 +708,7 @@ void addrecord( )
             return ;
             
         }
+
         
     }
     
@@ -795,6 +796,5 @@ void addrecord( )
     getch();
     
 }
-
 
 
