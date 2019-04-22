@@ -644,21 +644,6 @@ void deleterecords()
 
 }		
 
-
-
-3 of 20
-Contribution Code- SCM Project
-Inbox
-x
-
-Ajay Tyagi <ajaytyagi0209@gmail.com>
-Attachments
-Apr 17, 2019, 12:29 PM (4 days ago)
-to me
-
-
-Attachments area
-
 void addrecord( )
 
 {
